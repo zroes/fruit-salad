@@ -4,6 +4,7 @@ import { Player } from "../Models/Player.js"
 
 class PlayersService {
   setActive(playerId) {
+    console.log(playerId, 'set as active');
     let selectedPlayer = appState.players.find(p => p.id == playerId)
     appState.activePlayer = selectedPlayer
   }

@@ -9,11 +9,16 @@ function _drawPlayers() {
   setHTML('players-list', template)
 }
 
+function _drawActive() {
+  setHTML('active-player', appState.activePlayer.ActiveTemplate)
+}
+
 
 export class PlayersController {
   constructor() {
     _drawPlayers()
     appState.on('players', _drawPlayers)
+    appState.on('activePlayer', _drawActive)
   }
 
   addPlayer() {
@@ -22,6 +27,7 @@ export class PlayersController {
     let form = window.event.target
     let newPlayerData = getFormData(form)
     playersService.addPlayer(newPlayerData)
+    console.log(newPlayerData);
     // @ts-ignore
     form.reset()
   }

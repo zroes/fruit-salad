@@ -11,6 +11,11 @@ function _drawPlayers() {
 
 function _drawActive() {
   setText('active-player', appState.activePlayer.name)
+  setText('current-score', appState.activePlayer.score)
+}
+
+function _drawFruit() {
+  setText('active-fruit', appState.activeFruit)
 }
 
 
@@ -19,6 +24,7 @@ export class PlayersController {
     _drawPlayers()
     appState.on('players', _drawPlayers)
     appState.on('activePlayer', _drawActive)
+    appState.on('activeFruit', _drawFruit)
   }
 
   addPlayer() {
@@ -34,6 +40,14 @@ export class PlayersController {
 
   setActive(playerId) {
     playersService.setActive(playerId)
+  }
+
+  randomFruit() {
+    playersService.randomFruit()
+  }
+
+  checkAnswer() {
+    console.log('checking');
   }
 
 }

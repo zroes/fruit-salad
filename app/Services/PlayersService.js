@@ -16,7 +16,10 @@ class PlayersService {
     appState.emit('players')
   }
 
-
+  randomFruit() {
+    let randomIndex = (Math.floor(Math.random() * appState.fruits.length))
+    appState.activeFruit = appState.fruits[randomIndex]
+  }
 
 }
 

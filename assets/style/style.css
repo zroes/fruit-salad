@@ -9,3 +9,7 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+.our-game {
+  min-height: 60vh;
+}

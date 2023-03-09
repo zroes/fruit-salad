@@ -17,6 +17,9 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Player').Player|null} */
 
   activePlayer = null
+
+  fruits = ['apple', 'orange', 'banana', 'tangerine', 'pear', 'strawberry']
+  activeFruit = null
 }
 
 

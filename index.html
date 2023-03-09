@@ -27,35 +27,48 @@
   <main>
     <div class="container-fluid">
       <section class="row p-2">
+
         <div class="col-7">
-          <div class="row text-center">
+          <div class="row text-center rounded bg-dark p-2 mx-3 our-game">
             <div class="col-6">
-              <h4 id="active-player">current player name</h4>
+              <h4 id="active-player">
+                <!-- current player goes here -->
+              </h4>
             </div>
             <div class="col-6">
-              <h4>Score: current score</h4>
+              <h4>Score: <span id="current-score"></span></h4>
             </div>
             <div class="col-12">
-              <p>current word</p>
+              <h2 id="active-fruit">Banana
+                <!-- active fruit goes here -->
+              </h2>
+              <form onsubmit="app.playersController.checkAnswer()">
+                <input type="text" name="answer" id="answer">
+
+              </form>
             </div>
           </div>
         </div>
-        <div class="col-5 p-3 px-5 bg-dark">
-          <h3>Players</h3>
-          <div class="row" id="players-list">
-            <!-- SECTION all previous players and their high scores -->
-            <!-- <div class="col-6">
+
+        <div class="col-5">
+          <div class="p-3 px-5 bg-dark rounded">
+            <h3>Players</h3>
+            <div class="row" id="players-list">
+              <!-- SECTION all previous players and their high scores -->
+              <!-- <div class="col-6">
               <p>name</p>
             </div>
             <div class=" text-end col-6">
               <p>Highscore: </p>
             </div> -->
+            </div>
+            <form onsubmit="app.playersController.addPlayer()">
+              <input name="name" id="name" class="form-control mb-3" type="text" placeholder="Player Name">
+              <button onclick="" class="btn btn-info">Add Player</button>
+            </form>
           </div>
-          <form onsubmit="app.playersController.addPlayer()">
-            <input name="name" id="name" class="form-control mb-3" type="text" placeholder="Player Name">
-            <button onclick="" class="btn btn-info">Add Player</button>
-          </form>
         </div>
+
       </section>
     </div>
   </main>

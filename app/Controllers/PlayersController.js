@@ -17,7 +17,8 @@ export class PlayersController {
   }
 
   addPlayer() {
-    window.event.preventDefault()
+    console.log('adding player');
+    event.preventDefault()
     let form = window.event.target
     let newPlayerData = getFormData(form)
     playersService.addPlayer(newPlayerData)

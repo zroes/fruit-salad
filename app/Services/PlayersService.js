@@ -6,6 +6,7 @@ class PlayersService {
   setActive(playerId) {
     console.log(playerId, 'set as active');
     let selectedPlayer = appState.players.find(p => p.id == playerId)
+    console.log(selectedPlayer)
     appState.activePlayer = selectedPlayer
   }
 

@@ -16,7 +16,7 @@ export class Player {
   get ListTemplate() {
     return `
     <div class="col-6">
-      <p class="cursor-pointer" onclick="app.playersController.setActive(${this.id})">${this.name}</p>
+      <p class="cursor-pointer" onclick="app.playersController.setActive('${this.id}')">${this.name}</p>
     </div>
     <div class=" text-end col-6">
       <p>Highscore: ${this.topScore}</p>

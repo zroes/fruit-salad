@@ -1,7 +1,7 @@
 import { appState } from "../AppState.js"
 import { playersService } from "../Services/PlayersService.js"
 import { getFormData } from "../Utils/FormHandler.js"
-import { setHTML } from "../Utils/Writer.js"
+import { setHTML, setText } from "../Utils/Writer.js"
 
 function _drawPlayers() {
   let template = ``
@@ -10,7 +10,7 @@ function _drawPlayers() {
 }
 
 function _drawActive() {
-  setHTML('active-player', appState.activePlayer.ActiveTemplate)
+  setText('active-player', appState.activePlayer.name)
 }
 
 

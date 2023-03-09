@@ -24,10 +24,4 @@ export class Player {
     `
   }
 
-  get ActiveTemplate() {
-    return `
-    <h3>${appState.activePlayer.name}</h3>}
-    `
-  }
-
 }

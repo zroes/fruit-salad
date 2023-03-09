@@ -1,3 +1,4 @@
+import { appState } from "../AppState.js"
 import { generateId } from "../Utils/generateId.js"
 
 
@@ -15,6 +16,12 @@ export class Player {
   get ListTemplate() {
     return `
     <h5>${this.name} | ${this.topScore}
+    `
+  }
+
+  get ActiveTemplate() {
+    return `
+    <h3>${appState.activePlayer.name}</h3>}
     `
   }
 

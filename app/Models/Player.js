@@ -14,7 +14,12 @@ export class Player {
 
   get ListTemplate() {
     return `
-    <h5>${this.name} | ${this.topScore}
+    <div class="col-6">
+      <p class="cursor-pointer" onclick="app.playersController.setActive(${this.id})">${this.name}</p>
+    </div>
+    <div class=" text-end col-6">
+      <p>Highscore: ${this.topScore}</p>
+    </div>
     `
   }
 

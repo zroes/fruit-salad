@@ -43,15 +43,16 @@
         <div class="col-5 p-3 px-5 bg-dark">
           <h3>Players</h3>
           <div class="row" id="players-list">
-            <div class="col-6">
+            <!-- SECTION all previous players and their high scores -->
+            <!-- <div class="col-6">
               <p>name</p>
             </div>
             <div class=" text-end col-6">
               <p>Highscore: </p>
-            </div>
+            </div> -->
           </div>
           <form onsubmit="app.playersController.addPlayer()">
-            <input class="form-control mb-3" type="text" placeholder="Player Name">
+            <input name="name" id="name" class="form-control mb-3" type="text" placeholder="Player Name">
             <button onclick="" class="btn btn-info">Add Player</button>
           </form>
         </div>

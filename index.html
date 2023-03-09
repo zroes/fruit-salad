@@ -26,11 +26,11 @@
   </header>
   <main>
     <div class="container-fluid">
-      <section class="row">
+      <section class="row p-2">
         <div class="col-7">
           <div class="row text-center">
             <div class="col-6">
-              <h4>Player name</h4>
+              <h4>current player name</h4>
             </div>
             <div class="col-6">
               <h4>Score: current score</h4>
@@ -40,10 +40,20 @@
             </div>
           </div>
         </div>
-        <div class="col-5">
-          <div class="row">
-
+        <div class="col-5 p-3 px-5 bg-dark">
+          <h3>Players</h3>
+          <div class="row" id="players-list">
+            <div class="col-6">
+              <p>name</p>
+            </div>
+            <div class=" text-end col-6">
+              <p>Highscore: </p>
+            </div>
           </div>
+          <form action="">
+            <input class="form-control mb-3" type="text" placeholder="Player Name">
+            <button onclick="appState.playersController.addPlayer()" class="btn btn-info">Add Player</button>
+          </form>
         </div>
       </section>
     </div>
